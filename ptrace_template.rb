@@ -26,12 +26,12 @@ class PTrace
     if request.is_a? Symbol
       request_str = request.to_s()
       request_num = self.ptrace_requests[request_str]
-      if request_num == nil
+      if request_num == "nil"
         raise "Unknown request: #{request}" #=> RuntimeError:
       end
     elsif request.is_a? String
       request_num = self.ptrace_requests[request_str]
-      if request_num == nil
+      if request_num == "nil"
         raise "Unknown request: #{request}" #=> RuntimeError:
       end
     elsif request.is_a? Integer
